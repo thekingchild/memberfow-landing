@@ -252,21 +252,31 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   z-index: 120;
   width: 44px;
   height: 44px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
+  flex: 0 0 44px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 .nav-toggle span {
   display: block;
+  position: absolute;
+  left: 10px;
   width: 24px;
   height: 2px;
   background: #fff;
   border-radius: 2px;
-  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+  transform-origin: center;
+  transition: transform 0.3s var(--ease), opacity 0.2s var(--ease);
 }
-body.nav-open .nav-toggle span:first-child { transform: translateY(4.5px) rotate(45deg); }
-body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate(-45deg); }
+.nav-toggle span:nth-child(1) { top: 14px; }
+.nav-toggle span:nth-child(2) { top: 21px; }
+.nav-toggle span:nth-child(3) { top: 28px; }
+body.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+body.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+body.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 
@@ -1016,6 +1026,13 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
 
 @media (max-width: 760px) {
   .brand-logo { height: 25.5px; }
+  /* A backdrop filter makes fixed descendants use the navbar as their
+     containing block on mobile, collapsing the full-screen menu to 76px. */
+  .navbar.scrolled {
+    background: rgba(12, 30, 33, 0.97);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .nav-links {
     position: fixed;
     inset: 0;
