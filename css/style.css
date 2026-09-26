@@ -206,14 +206,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
   color: #fff;
 }
-.brand-name {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1.22rem;
-  letter-spacing: -0.01em;
+.brand-logo {
+  display: block;
+  height: 34px;
+  width: auto;
 }
 
 .nav-links {
