@@ -316,7 +316,9 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
   max-width: 12.5em;
   margin-bottom: clamp(20px, 3.2vh, 30px);
 }
-.hero-title .dim, .cta-title .dim { color: rgba(255, 255, 255, 0.44); }
+.hero-title .dim { color: #d8dce5; }
+.hero-title .hero-accent { color: #f3a08a; }
+.cta-title .dim { color: rgba(255, 255, 255, 0.58); }
 
 .hero-sub {
   font-size: clamp(1rem, 1.25vw, 1.13rem);
@@ -393,7 +395,8 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, rgba(12, 30, 33, 0.55) 0%, rgba(12, 30, 33, 0.12) 45%, rgba(16, 62, 58, 0.35) 100%);
+    linear-gradient(100deg, rgba(11, 18, 32, 0.68) 0%, rgba(11, 18, 32, 0.16) 48%, rgba(11, 18, 32, 0.24) 100%),
+    linear-gradient(0deg, rgba(11, 18, 32, 0.18), transparent 42%);
 }
 
 /* ---------- Sections (shared) ---------- */
@@ -538,7 +541,7 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
 .how-panel-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(185deg, rgba(12, 30, 33, 0.25) 0%, rgba(12, 30, 33, 0.55) 55%, rgba(12, 30, 33, 0.92) 100%);
+  background: linear-gradient(185deg, rgba(11, 18, 32, 0.14) 0%, rgba(11, 18, 32, 0.42) 52%, rgba(11, 18, 32, 0.9) 100%);
 }
 .how-panel-content {
   position: relative;
@@ -700,13 +703,14 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
 .testimonials-bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/img/testimonial-bg.jpg") center 38% / cover no-repeat;
+  background: url("../assets/img/testimonial-members-v2.png") center / cover no-repeat;
 }
 .testimonials-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(12, 30, 33, 0.82), rgba(12, 30, 33, 0.68) 45%, rgba(12, 30, 33, 0.88));
+  background: linear-gradient(90deg, rgba(11, 18, 32, 0.88) 0%, rgba(11, 18, 32, 0.74) 46%, rgba(11, 18, 32, 0.36) 100%),
+    linear-gradient(180deg, rgba(11, 18, 32, 0.2), rgba(11, 18, 32, 0.7));
 }
 .testimonials-inner { position: relative; }
 
@@ -838,13 +842,14 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
 .cta-bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/img/cta-bg.jpg") center / cover no-repeat;
+  background: url("../assets/img/cta-members-v2.png") center / cover no-repeat;
 }
 .cta-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(12, 30, 33, 0.86), rgba(16, 62, 58, 0.78) 50%, rgba(12, 30, 33, 0.9));
+  background: radial-gradient(circle at 50% 35%, rgba(11, 18, 32, 0.44), rgba(11, 18, 32, 0.88) 72%),
+    linear-gradient(180deg, rgba(11, 18, 32, 0.48), rgba(11, 18, 32, 0.78));
 }
 .cta-inner { position: relative; }
 
