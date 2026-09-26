@@ -1015,6 +1015,7 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
 }
 
 @media (max-width: 760px) {
+  .brand-logo { height: 25.5px; }
   .nav-links {
     position: fixed;
     inset: 0;
@@ -1048,6 +1049,8 @@ body.nav-open .nav-toggle span:last-child { transform: translateY(-4.5px) rotate
   .btn { padding: 13px 22px; }
   .hero-title { font-size: clamp(2.35rem, 9.4vw, 3rem); }
   .hero-right { min-height: 340px; max-height: 48vh; }
+  /* The fixed navigation sits over the image on small screens, not the copy. */
+  .hero-left { padding-top: 32px; }
   .trust-grid { grid-template-columns: minmax(0, 1fr); }
   .footer-cols { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .footer-col { padding-block: 18px; border-top: 1px solid var(--border-inverse); }
