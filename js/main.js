@@ -170,7 +170,7 @@
     demoSubmitBtn.disabled = false;
     demoSubmitBtn.classList.remove("loading");
     demoSubmitText.textContent = "Request a demo";
-    demoAlert.textContent = "Sorry — something went wrong sending your request. Please try again, or email hello@membersflow.com directly.";
+    demoAlert.textContent = "Sorry — something went wrong sending your request. Please try again, or email hello@membersflow.ng directly.";
     demoAlert.hidden = false;
   }
 
