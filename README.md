@@ -62,7 +62,7 @@ for the Claude desktop preview.
 
 ## Notes
 
-- Fonts load from Google Fonts (Inter, Fraunces); system fallbacks are set.
+- Fonts load from Google Fonts (Inter, Inter Tight); system fallbacks are set.
 - Every "Book a demo" button opens the demo request modal, which posts to
   StaticForms (`https://api.staticforms.dev/submit`, key in `js/main.js`).
   The buttons keep a `mailto:hello@membersflow.ng` href as the no-JS fallback.
