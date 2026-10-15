@@ -29,7 +29,7 @@ language; that is operator-side.
 index.html        — nav + 10 sections + footer
 css/style.css     — tokens, base, components, responsive rules
 js/main.js        — nav, vocabulary switcher, renewal slider, payment tabs,
-                    card flip, roles picker, scroll reveal
+                    card flip, roles picker, demo modal (StaticForms), reveal
 assets/           — favicon.png (cropped logo mark); img/logo-dark.png,
                     img/logo-light.png
 ```
@@ -63,5 +63,7 @@ for the Claude desktop preview.
 ## Notes
 
 - Fonts load from Google Fonts (Inter, Fraunces); system fallbacks are set.
-- All CTAs go to the final CTA section or `hello@membersflow.ng`.
+- Every "Book a demo" button opens the demo request modal, which posts to
+  StaticForms (`https://api.staticforms.dev/submit`, key in `js/main.js`).
+  The buttons keep a `mailto:hello@membersflow.ng` href as the no-JS fallback.
 - Interactions are keyboard accessible and honor `prefers-reduced-motion`.

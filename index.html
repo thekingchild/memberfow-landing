@@ -103,7 +103,7 @@
         <a href="#payments">Payments</a>
         <a href="#access">Security</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-primary btn-nav js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a demo</a>
+        <a class="btn btn-primary btn-nav js-demo" data-demo-trigger href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a demo</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
@@ -124,7 +124,7 @@
             <h1 class="display">Run your entire membership organization from <em>one organized place</em>, <strong>not a pile of spreadsheets.</strong></h1>
             <p class="lede">Applications, dues, renewals, member records and your public directory in one portal your staff and members will actually use. We deploy and maintain it. Your team only logs in.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary btn-lg js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
+              <a class="btn btn-primary btn-lg js-demo" data-demo-trigger href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
               <a class="link-arrow" href="#coverage">See what's included <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -802,7 +802,7 @@
         <h2 class="display display-sm">Bring your membership <strong>into one flow.</strong></h2>
         <p class="cta-body">We deploy and configure Membersflow for your organization and give your team and members a portal worth logging into. You bring the members; we run the software.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
+          <a class="btn btn-primary btn-lg js-demo" data-demo-trigger href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
           <a class="link-arrow link-arrow-light" href="mailto:hello@membersflow.ng">Talk to us <span aria-hidden="true">→</span></a>
         </div>
         <p class="cta-email">Or write to us directly: <a href="mailto:hello@membersflow.ng" id="cta-email">hello@membersflow.ng</a> <button class="copy-btn" type="button" id="copy-email" data-email="hello@membersflow.ng">Copy</button></p>
@@ -828,6 +828,117 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2" defer></script>
+  <!-- ============================== DEMO REQUEST MODAL ============================== -->
+  <div class="demo-overlay" id="demo-overlay" aria-hidden="true">
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-title" aria-describedby="demo-sub">
+      <button class="demo-close" type="button" data-demo-close aria-label="Close demo request form">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <div class="demo-panel" aria-hidden="true">
+        <img class="demo-logo" src="assets/img/logo-light.png" alt="" width="150" height="45">
+        <div class="demo-panel-content">
+          <p class="demo-panel-eyebrow">Book your demo</p>
+          <p class="demo-panel-title">See Membersflow running with <strong>your own structure.</strong></p>
+          <ul class="demo-perks">
+            <li>A guided walkthrough of the full member journey</li>
+            <li>Your membership types, dues and branding configured with you</li>
+            <li>Your existing register imported as part of setup</li>
+          </ul>
+          <p class="demo-panel-note"><span class="pulse-dot" aria-hidden="true"></span>Deployed and maintained for you. Nothing to install.</p>
+        </div>
+      </div>
+
+      <div class="demo-body">
+        <form class="demo-form" id="demo-form" novalidate>
+          <p class="demo-form-eyebrow">Demo request</p>
+          <h2 class="demo-title" id="demo-title">Request a demo</h2>
+          <p class="demo-sub" id="demo-sub">Tell us a little about your organization and we'll reach out to schedule a walkthrough.</p>
+
+          <div class="demo-row">
+            <div class="demo-field">
+              <label for="demo-name">Full name</label>
+              <input id="demo-name" name="name" type="text" autocomplete="name" placeholder="Ada Obi" required>
+            </div>
+            <div class="demo-field">
+              <label for="demo-email">Work email</label>
+              <input id="demo-email" name="email" type="email" autocomplete="email" placeholder="ada@yourorganization.org" required>
+            </div>
+          </div>
+
+          <div class="demo-row">
+            <div class="demo-field">
+              <label for="demo-org">Organization</label>
+              <input id="demo-org" name="organization" type="text" autocomplete="organization" placeholder="Institute of …" required>
+            </div>
+            <div class="demo-field">
+              <label for="demo-phone">Phone <span class="opt">optional</span></label>
+              <input id="demo-phone" name="phone" type="tel" autocomplete="tel" placeholder="+234 800 000 0000">
+            </div>
+          </div>
+
+          <div class="demo-row">
+            <div class="demo-field">
+              <label for="demo-type">Type of organization</label>
+              <select id="demo-type" name="organizationType">
+                <option value="" selected>Select the closest fit</option>
+                <option>Professional association or institute</option>
+                <option>Regulatory or certification body</option>
+                <option>Alumni association</option>
+                <option>Trade body or union</option>
+                <option>Club or society</option>
+                <option>Faith-based organization</option>
+                <option>Cooperative or NGO</option>
+                <option>Training or academic institution</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="demo-field">
+              <label for="demo-members">Current members</label>
+              <select id="demo-members" name="membersRange">
+                <option value="" selected>Select a range</option>
+                <option>Under 100</option>
+                <option>100 – 500</option>
+                <option>500 – 1,000</option>
+                <option>1,000 – 5,000</option>
+                <option>5,000 – 10,000</option>
+                <option>Over 10,000</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="demo-field">
+            <label for="demo-message">Anything we should know? <span class="opt">optional</span></label>
+            <textarea id="demo-message" name="message" rows="3" placeholder="What you use today, timeline, questions…"></textarea>
+          </div>
+
+          <div class="demo-hp" aria-hidden="true">
+            <label for="demo-gotcha">Leave this field empty</label>
+            <input id="demo-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="demo-alert" id="demo-alert" role="alert" hidden></p>
+
+          <button class="btn btn-primary demo-submit" type="submit">
+            <span class="demo-submit-text">Request a demo</span>
+            <span class="demo-spinner" aria-hidden="true"></span>
+          </button>
+          <p class="demo-fine">Or email <a href="mailto:hello@membersflow.ng">hello@membersflow.ng</a>. No spam, no newsletter.</p>
+        </form>
+
+        <div class="demo-success" id="demo-success" tabindex="-1" hidden>
+          <span class="demo-success-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5 10 18 19.5 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h2 class="demo-success-title">Request received</h2>
+          <p class="demo-success-text">Thanks, <strong id="demo-success-name"></strong>. Your request is in. We'll email <strong id="demo-success-email"></strong> within one business day to schedule your walkthrough.</p>
+          <button class="btn btn-secondary demo-done" type="button" data-demo-close>Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=3" defer></script>
 </body>
 </html>

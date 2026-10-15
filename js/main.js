@@ -283,23 +283,164 @@
     applyRole('registrar');
   }
 
-  /* ---------- Demo request: prefilled email + copy fallback ---------- */
+  /* ---------- Demo request modal (StaticForms) ---------- */
+  /* Trigger buttons keep a mailto: href as the no-JS fallback. */
 
-  var DEMO_BODY = [
-    'Hello Membersflow,',
-    '',
-    'We would like to see a demo of the portal.',
-    '',
-    'Organization: ',
-    'Your name and role: ',
-    'Approximate number of members: ',
-    'Best time to reach you: ',
-    ''
-  ].join('\n');
+  var STATICFORMS_ENDPOINT = 'https://api.staticforms.dev/submit';
+  var STATICFORMS_KEY = 'sf_3f33e84acd6f8143f073b6b8';
 
-  $$('.js-demo').forEach(function (a) {
-    a.setAttribute('href', 'mailto:hello@membersflow.ng?subject=' + encodeURIComponent('Membersflow demo request') + '&body=' + encodeURIComponent(DEMO_BODY));
-  });
+  var demoOverlay = $('#demo-overlay');
+  var demoForm = $('#demo-form');
+  var demoSuccess = $('#demo-success');
+  var demoAlert = $('#demo-alert');
+  var demoSubmitBtn = demoForm ? $('.demo-submit', demoForm) : null;
+  var demoSubmitText = demoForm ? $('.demo-submit-text', demoForm) : null;
+  var demoLastFocus = null;
+
+  function demoIsOpen() { return demoOverlay.classList.contains('is-open'); }
+
+  function demoFocusables() {
+    return $$('a[href], button:not([disabled]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]), textarea:not([disabled]), [tabindex="-1"]', demoOverlay)
+      .filter(function (el) { return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); });
+  }
+
+  function resetDemo() {
+    demoForm.reset();
+    demoForm.hidden = false;
+    demoSuccess.hidden = true;
+    demoAlert.hidden = true;
+    demoAlert.textContent = '';
+    demoSubmitBtn.disabled = false;
+    demoSubmitBtn.classList.remove('is-loading');
+    demoSubmitText.textContent = 'Request a demo';
+    $$('.is-invalid', demoForm).forEach(function (el) { el.classList.remove('is-invalid'); });
+  }
+
+  function openDemo() {
+    demoLastFocus = document.activeElement;
+    closeMenu();
+    resetDemo();
+    document.body.classList.add('demo-open');
+    demoOverlay.classList.add('is-open');
+    demoOverlay.setAttribute('aria-hidden', 'false');
+    $('#demo-name').focus();
+  }
+
+  function closeDemo() {
+    if (!demoIsOpen()) return;
+    demoOverlay.classList.remove('is-open');
+    demoOverlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('demo-open');
+    if (demoLastFocus && typeof demoLastFocus.focus === 'function') demoLastFocus.focus();
+    // wait out the fade before resetting, so the swap is never visible
+    setTimeout(function () { if (!demoIsOpen()) resetDemo(); }, 400);
+  }
+
+  function showDemoSuccess(name, email) {
+    $('#demo-success-name').textContent = name.split(' ')[0] || name;
+    $('#demo-success-email').textContent = email;
+    demoForm.hidden = true;
+    demoSuccess.hidden = false;
+    demoSuccess.focus();
+  }
+
+  function failDemo() {
+    demoSubmitBtn.disabled = false;
+    demoSubmitBtn.classList.remove('is-loading');
+    demoSubmitText.textContent = 'Request a demo';
+    demoAlert.textContent = 'Sorry, something went wrong sending your request. Please try again, or email hello@membersflow.ng directly.';
+    demoAlert.hidden = false;
+  }
+
+  if (demoOverlay && demoForm) {
+    $$('[data-demo-trigger]').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) { e.preventDefault(); openDemo(); });
+    });
+    $$('[data-demo-close]').forEach(function (btn) { btn.addEventListener('click', closeDemo); });
+    demoOverlay.addEventListener('click', function (e) { if (e.target === demoOverlay) closeDemo(); });
+
+    document.addEventListener('keydown', function (e) {
+      if (!demoIsOpen()) return;
+      if (e.key === 'Escape') { closeDemo(); return; }
+      if (e.key !== 'Tab') return;
+      var f = demoFocusables();
+      if (!f.length) return;
+      var first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    demoForm.addEventListener('input', function (e) {
+      if (e.target.classList) e.target.classList.remove('is-invalid');
+      if (!demoAlert.hidden) demoAlert.hidden = true;
+    });
+
+    demoForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // honeypot: bots that fill the hidden field get a silent fake success
+      if ($('#demo-gotcha').value) { showDemoSuccess('there', ''); return; }
+
+      var name = $('#demo-name').value.trim();
+      var email = $('#demo-email').value.trim();
+      var org = $('#demo-org').value.trim();
+      var phone = $('#demo-phone').value.trim();
+      var orgType = $('#demo-type').value;
+      var members = $('#demo-members').value;
+      var message = $('#demo-message').value.trim();
+
+      var invalid = [];
+      if (name.length < 2) invalid.push('demo-name');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) invalid.push('demo-email');
+      if (org.length < 2) invalid.push('demo-org');
+      if (invalid.length) {
+        invalid.forEach(function (id) { $('#' + id).classList.add('is-invalid'); });
+        demoAlert.textContent = "Please add your name, a valid work email, and your organization's name.";
+        demoAlert.hidden = false;
+        $('#' + invalid[0]).focus();
+        return;
+      }
+
+      demoSubmitBtn.disabled = true;
+      demoSubmitBtn.classList.add('is-loading');
+      demoSubmitText.textContent = 'Sending…';
+      demoAlert.hidden = true;
+
+      // bail out with the fallback message if the API stalls
+      var controller = new AbortController();
+      var timeout = setTimeout(function () { controller.abort(); }, 15000);
+
+      fetch(STATICFORMS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          apiKey: STATICFORMS_KEY,
+          subject: 'Demo request — Membersflow landing',
+          replyTo: email,
+          name: name,
+          email: email,
+          organization: org,
+          organizationType: orgType,
+          currentMembers: members,
+          phone: phone,
+          message: message,
+          source: 'Membersflow landing page'
+        }),
+        signal: controller.signal
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (data) { return { ok: res.ok, data: data }; });
+        })
+        .then(function (result) {
+          clearTimeout(timeout);
+          if (result.ok && result.data && result.data.success) showDemoSuccess(name, email);
+          else failDemo();
+        })
+        .catch(function () { clearTimeout(timeout); failDemo(); });
+    });
+  }
+
+  /* ---------- Copy email fallback ---------- */
 
   var copyBtn = $('#copy-email');
   if (copyBtn) {
