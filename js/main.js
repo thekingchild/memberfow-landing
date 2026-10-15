@@ -385,6 +385,7 @@
       var email = $('#demo-email').value.trim();
       var org = $('#demo-org').value.trim();
       var phone = $('#demo-phone').value.trim();
+      var whatsapp = $('#demo-whatsapp').value.trim();
       var orgType = $('#demo-type').value;
       var members = $('#demo-members').value;
       var message = $('#demo-message').value.trim();
@@ -393,9 +394,10 @@
       if (name.length < 2) invalid.push('demo-name');
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) invalid.push('demo-email');
       if (org.length < 2) invalid.push('demo-org');
+      if (phone.replace(/\D/g, '').length < 7) invalid.push('demo-phone');
       if (invalid.length) {
         invalid.forEach(function (id) { $('#' + id).classList.add('is-invalid'); });
-        demoAlert.textContent = "Please add your name, a valid work email, and your organization's name.";
+        demoAlert.textContent = "Please add your name, a valid work email, your organization's name and a phone number we can reach you on.";
         demoAlert.hidden = false;
         $('#' + invalid[0]).focus();
         return;
@@ -423,6 +425,7 @@
           organizationType: orgType,
           currentMembers: members,
           phone: phone,
+          whatsapp: whatsapp || phone,
           message: message,
           source: 'Membersflow landing page'
         }),
