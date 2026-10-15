@@ -557,7 +557,8 @@ h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; lett
 .legal-content { max-width: 760px; }
 .legal-section { display: grid; grid-template-columns: 56px 1fr; gap: 4px 16px; padding: 28px 0; border-top: 1px solid var(--line); }
 .legal-section:first-child { border-top: 0; padding-top: 0; }
-.legal-section .step-label { grid-row: span 3; font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; color: var(--accent); padding-top: 4px; }
+.legal-section > * { grid-column: 2; }
+.legal-section .step-label { grid-column: 1; grid-row: 1; font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; color: var(--accent); padding-top: 4px; }
 .legal-section h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.2; }
 .legal-section p, .legal-section li { color: var(--muted); font-size: 0.98rem; }
 .legal-section p { margin-top: 10px; }
@@ -592,6 +593,7 @@ h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; lett
 
 @media (max-width: 860px) {
   .legal-section { grid-template-columns: 1fr; gap: 6px; }
+  .legal-section > * { grid-column: 1; }
   .legal-section .step-label { grid-row: auto; padding-top: 0; }
   .err-grid { grid-template-columns: 1fr; }
   .err-card { max-width: none; }
