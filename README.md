@@ -63,5 +63,5 @@ for the Claude desktop preview.
 ## Notes
 
 - Fonts load from Google Fonts (Inter, Fraunces); system fallbacks are set.
-- All CTAs go to the final CTA section or `hello@membersflow.com`.
+- All CTAs go to the final CTA section or `hello@membersflow.ng`.
 - Interactions are keyboard accessible and honor `prefers-reduced-motion`.

@@ -6,7 +6,82 @@
   <title>Membersflow — Membership management for organizations and institutions</title>
   <meta name="description" content="Membersflow is a fully managed membership portal for professional associations and institutions: applications, dues, renewals, membership cards and a public directory in one place. We deploy and maintain it; your team only logs in.">
   <meta name="theme-color" content="#E86C4C">
+  <link rel="canonical" href="https://www.membersflow.ng/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Membersflow">
+  <meta property="og:locale" content="en_NG">
+  <meta property="og:url" content="https://www.membersflow.ng/">
+  <meta property="og:title" content="Membersflow — Run your entire membership organization from one organized place">
+  <meta property="og:description" content="A fully managed membership portal for associations and institutions: applications, dues, renewals, membership cards and a public directory. We deploy and maintain it; your team only logs in.">
+  <meta property="og:image" content="https://www.membersflow.ng/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Membersflow — membership management for organizations and institutions">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Membersflow — Run your entire membership organization from one organized place">
+  <meta name="twitter:description" content="A fully managed membership portal for associations and institutions: applications, dues, renewals, membership cards and a public directory.">
+  <meta name="twitter:image" content="https://www.membersflow.ng/assets/og-image.png">
+
   <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.membersflow.ng/#organization",
+        "name": "Membersflow",
+        "url": "https://www.membersflow.ng/",
+        "logo": "https://www.membersflow.ng/assets/img/logo-dark.png",
+        "email": "hello@membersflow.ng",
+        "areaServed": "NG"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.membersflow.ng/#website",
+        "url": "https://www.membersflow.ng/",
+        "name": "Membersflow",
+        "publisher": { "@id": "https://www.membersflow.ng/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Membersflow",
+        "url": "https://www.membersflow.ng/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "A fully managed membership portal for professional associations and institutions: applications and approvals, dues and payments through Paystack, Flutterwave or bank transfer, renewal reminders, printable membership cards with QR verification, and an opt-in public directory.",
+        "provider": { "@id": "https://www.membersflow.ng/#organization" },
+        "featureList": [
+          "Online membership applications and approvals",
+          "Dues and payments via Paystack, Flutterwave or verified bank transfer",
+          "Immutable invoices and receipts",
+          "Renewal reminders at six stages",
+          "Printable membership cards with live QR verification",
+          "Opt-in public member directory",
+          "Role-based access with audit log",
+          "CSV import with dry-run preview"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Do we need our own servers or an IT team?", "acceptedAnswer": { "@type": "Answer", "text": "No. Membersflow is fully managed. We deploy, host and maintain the portal for you. Your staff and members only need a browser." } },
+          { "@type": "Question", "name": "How do we get started?", "acceptedAnswer": { "@type": "Answer", "text": "Book a demo. We walk you through the portal, then configure your membership structure, branding and payment setup, and import your existing register as part of onboarding." } },
+          { "@type": "Question", "name": "Which payment methods are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Paystack and Flutterwave for online card payments, plus bank transfer with uploaded proof that your finance team verifies and settles. Manual payments can also be recorded." } },
+          { "@type": "Question", "name": "Does it charge members' cards automatically?", "acceptedAnswer": { "@type": "Answer", "text": "No. Renewal is manual by design: members receive reminders and renew themselves. There are no surprise debits." } },
+          { "@type": "Question", "name": "Can we import our existing members?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A guided CSV import validates every row and shows a dry-run preview before anything is applied to your register." } },
+          { "@type": "Question", "name": "Is the public directory compulsory?", "acceptedAnswer": { "@type": "Answer", "text": "No. Publication is opt-in per member and configurable by the organization. Many bodies run entirely without a public directory." } },
+          { "@type": "Question", "name": "Will it match how our organization is structured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Membership classes and grades, chapters and regions, divisions and specialties are all configurable. The system adopts your vocabulary." } }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +103,7 @@
         <a href="#payments">Payments</a>
         <a href="#access">Security</a>
         <a href="#faq">FAQ</a>
-        <a class="btn btn-primary btn-nav" href="#cta">Book a demo</a>
+        <a class="btn btn-primary btn-nav js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a demo</a>
       </nav>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
@@ -49,7 +124,7 @@
             <h1 class="display">Run your entire membership organization from <em>one organized place</em>, <strong>not a pile of spreadsheets.</strong></h1>
             <p class="lede">Applications, dues, renewals, member records and your public directory in one portal your staff and members will actually use. We deploy and maintain it. Your team only logs in.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary btn-lg" href="#cta">Book a live demo</a>
+              <a class="btn btn-primary btn-lg js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
               <a class="link-arrow" href="#coverage">See what's included <span aria-hidden="true">↓</span></a>
             </div>
           </div>
@@ -685,7 +760,7 @@
         <div class="section-head section-head-left">
           <p class="eyebrow">FAQ</p>
           <h2 class="h2">Questions, <strong>answered.</strong></h2>
-          <p class="section-intro">Anything else, write to <a class="link" href="mailto:hello@membersflow.com">hello@membersflow.com</a>.</p>
+          <p class="section-intro">Anything else, write to <a class="link" href="mailto:hello@membersflow.ng">hello@membersflow.ng</a>.</p>
         </div>
         <div class="faq">
           <details name="faq" open>
@@ -727,9 +802,10 @@
         <h2 class="display display-sm">Bring your membership <strong>into one flow.</strong></h2>
         <p class="cta-body">We deploy and configure Membersflow for your organization and give your team and members a portal worth logging into. You bring the members; we run the software.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="mailto:hello@membersflow.com?subject=Membersflow%20demo%20request">Book a live demo</a>
-          <a class="link-arrow link-arrow-light" href="mailto:hello@membersflow.com">Talk to us <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary btn-lg js-demo" href="mailto:hello@membersflow.ng?subject=Membersflow%20demo%20request">Book a live demo</a>
+          <a class="link-arrow link-arrow-light" href="mailto:hello@membersflow.ng">Talk to us <span aria-hidden="true">→</span></a>
         </div>
+        <p class="cta-email">Or write to us directly: <a href="mailto:hello@membersflow.ng" id="cta-email">hello@membersflow.ng</a> <button class="copy-btn" type="button" id="copy-email" data-email="hello@membersflow.ng">Copy</button></p>
       </div>
     </section>
   </main>
@@ -746,7 +822,7 @@
         <a href="#access">Security</a>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
-        <a href="mailto:hello@membersflow.com">hello@membersflow.com</a>
+        <a href="mailto:hello@membersflow.ng">hello@membersflow.ng</a>
       </nav>
       <p class="footer-legal">© 2026 Membersflow</p>
     </div>

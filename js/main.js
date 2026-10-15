@@ -283,6 +283,41 @@
     applyRole('registrar');
   }
 
+  /* ---------- Demo request: prefilled email + copy fallback ---------- */
+
+  var DEMO_BODY = [
+    'Hello Membersflow,',
+    '',
+    'We would like to see a demo of the portal.',
+    '',
+    'Organization: ',
+    'Your name and role: ',
+    'Approximate number of members: ',
+    'Best time to reach you: ',
+    ''
+  ].join('\n');
+
+  $$('.js-demo').forEach(function (a) {
+    a.setAttribute('href', 'mailto:hello@membersflow.ng?subject=' + encodeURIComponent('Membersflow demo request') + '&body=' + encodeURIComponent(DEMO_BODY));
+  });
+
+  var copyBtn = $('#copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var email = copyBtn.dataset.email;
+      var done = function () {
+        copyBtn.textContent = 'Copied';
+        copyBtn.classList.add('is-copied');
+        setTimeout(function () { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('is-copied'); }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done, function () { window.prompt('Copy the address:', email); });
+      } else {
+        window.prompt('Copy the address:', email);
+      }
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
 
   var revealTargets = $$('.section-head, .coverage-list li, .steps li, .access-notes > div, .pay-facts li');

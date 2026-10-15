@@ -521,6 +521,11 @@ h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; lett
 .cta-inner { max-width: 760px; }
 .cta .display { color: var(--on-dark); }
 .cta-body { color: var(--on-dark-muted); font-size: 1.05rem; margin-top: 20px; max-width: 56ch; }
+.cta-email { margin-top: 22px; font-size: 0.9rem; color: var(--on-dark-muted); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.cta-email a { color: var(--on-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.copy-btn { padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-dark); color: var(--on-dark); font-size: 0.78rem; font-weight: 600; transition: background 0.15s, border-color 0.15s; }
+.copy-btn:hover { border-color: var(--on-dark); }
+.copy-btn.is-copied { background: var(--on-dark); color: var(--black); }
 
 /* Footer */
 
