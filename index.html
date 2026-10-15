@@ -4,489 +4,754 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Membersflow — Membership management for organizations and institutions</title>
-  <meta name="description" content="Membersflow brings applications, dues, renewals, member records, and your public directory into a single portal your staff and members will actually use.">
-  <meta property="og:title" content="Membersflow — Run your entire membership organization from one organized place">
-  <meta property="og:description" content="Applications, dues, renewals, member records, and your public directory — in a single managed portal.">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <meta name="description" content="Membersflow is a fully managed membership portal for professional associations and institutions: applications, dues, renewals, membership cards and a public directory in one place. We deploy and maintain it; your team only logs in.">
+  <meta name="theme-color" content="#E86C4C">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ NAVBAR ============ -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar-inner">
-      <a href="#top" class="brand" aria-label="Membersflow home">
-        <img class="brand-logo" src="assets/img/logo.png" alt="">
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Membersflow home">
+        <img class="brand-logo" src="assets/img/logo-dark.png" width="150" height="45" alt="Membersflow">
       </a>
 
-      <nav class="nav-links" id="nav-menu" aria-label="Primary">
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#how" class="nav-link">How it works</a>
-        <a href="#who" class="nav-link">Who it's for</a>
-        <a href="#payments" class="nav-link">Payments</a>
-        <a href="#security" class="nav-link">Security</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#cta" class="btn btn-light btn-sm nav-cta">
-          <span class="btn-label"><span>Request a demo</span><span aria-hidden="true">Request a demo</span></span>
-        </a>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#coverage">What it covers</a>
+        <a href="#system">How it fits</a>
+        <a href="#renewals">Renewals</a>
+        <a href="#payments">Payments</a>
+        <a href="#access">Security</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary btn-nav" href="#cta">Book a demo</a>
       </nav>
 
-      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
+
+    <!-- ============================== HERO ============================== -->
     <section class="hero" id="top">
-      <div class="hero-left">
-        <div class="hero-content">
-          <p class="hero-badge">Membership management for organizations &amp; institutions</p>
-          <h1 class="hero-title">
-            <span class="dim">Run your entire membership organization</span> <span class="hero-accent">from</span> one organized place.
-          </h1>
-          <p class="hero-sub">Membersflow brings applications, dues, renewals, member records, and your public directory into a single portal your staff and members will actually use. Built for professional associations, institutions, and every membership body in between.</p>
-          <div class="hero-actions">
-            <a href="#cta" class="btn btn-light">
-              <span class="btn-label"><span>Request a demo</span><span aria-hidden="true">Request a demo</span></span>
-              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#how" class="btn btn-ghost">
-              <span class="btn-label"><span>See how it works</span><span aria-hidden="true">See how it works</span></span>
-              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+      <div class="container">
+        <p class="crumb">Membersflow / Membership portal</p>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="display">Run your entire membership organization from <em>one organized place</em>, <strong>not a pile of spreadsheets.</strong></h1>
+            <p class="lede">Applications, dues, renewals, member records and your public directory in one portal your staff and members will actually use. We deploy and maintain it. Your team only logs in.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="#cta">Book a live demo</a>
+              <a class="link-arrow" href="#coverage">See what's included <span aria-hidden="true">↓</span></a>
+            </div>
           </div>
-          <p class="hero-note"><span class="pulse-dot" aria-hidden="true"></span>Deployed and maintained for you — no software to install, no servers to run.</p>
+
+          <dl class="hero-stats">
+            <div>
+              <dt>Managed for you</dt>
+              <dd>Hosted, updated, backed up</dd>
+              <p>No servers, no IT team, no install</p>
+            </div>
+            <div>
+              <dt>Built to carry a register</dt>
+              <dd>10,000 members</dd>
+              <p>Load tested · security assessed A (96.2)</p>
+            </div>
+          </dl>
         </div>
-        <ul class="hero-trust" aria-label="What Membersflow covers">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 13h4l2 3h6l2-3h4M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Applications
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="1.8"/></svg>
-            Dues &amp; payments
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11A8 8 0 0 0 6.3 6.3L4 8.5M4 5v3.5H7.5M4 13a8 8 0 0 0 13.7 4.7L20 15.5M20 19v-3.5h-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Renewals
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="12" r="2.2" stroke="currentColor" stroke-width="1.6"/><path d="M13.5 10h5M13.5 14h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            Membership cards
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c.8-3 3-4.5 5.5-4.5s4.7 1.5 5.5 4.5M16 5.6a3.2 3.2 0 0 1 0 5.8M17.5 14.7c1.7.6 2.8 1.9 3.3 4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Public directory
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.5 20 4l-4 16-5.5-6L3 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m10.5 14 3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            Member communication
-          </li>
+
+        <ul class="rail" aria-label="Who uses the portal">
+          <li><span>Member</span><small>Applies, pays, renews</small></li>
+          <li><span>Staff</span><small>Reviews, verifies, reports</small></li>
+          <li><span>Public</span><small>Finds, checks a card, reads</small></li>
         </ul>
       </div>
-      <div class="hero-right" aria-hidden="true">
-        <img src="assets/img/hero-members-v2.png" alt="">
-        <div class="hero-right-overlay"></div>
-      </div>
-    </section>
 
-    <!-- ============ PROBLEM ============ -->
-    <section class="section section-problem" id="problem">
-      <div class="container section-grid">
-        <div class="section-rail reveal">
-          <p class="eyebrow">The problem</p>
-        </div>
-        <div class="section-body">
-          <h2 class="h2 reveal">Your membership grew.<br>Your tools didn't.</h2>
-          <p class="lede reveal">New applications arrive by email. Dues live in a spreadsheet. Renewal dates sit in one officer's head. Every register is a different file, and no two ever agree.</p>
-          <ul class="pain-list">
-            <li class="reveal">
-              <span class="pain-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Applications scattered across inboxes, paper forms, and WhatsApp messages
-            </li>
-            <li class="reveal">
-              <span class="pain-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Payment records that don't reconcile with what members actually paid
-            </li>
-            <li class="reveal">
-              <span class="pain-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              Expired memberships discovered only at the worst moment
-            </li>
-            <li class="reveal">
-              <span class="pain-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              The same member recorded three different ways in three different files
-            </li>
-          </ul>
-          <div class="callout reveal">
-            <p>Membersflow replaces that patchwork with <strong>one system of record</strong> — from first application to every renewal after it.</p>
+      <!-- Product stage: admin desk + member phone, rebuilt in HTML -->
+      <div class="container hero-stage">
+        <figure class="desk" aria-label="Example of the administrator action queue">
+          <div class="desk-top">
+            <span class="desk-mark" aria-hidden="true"></span>
+            <span class="desk-crumb">Administration · Dashboard</span>
+            <span class="desk-live">Live · updated just now</span>
+            <span class="desk-user">KA</span>
           </div>
-        </div>
+          <div class="desk-body">
+            <aside class="desk-side" aria-hidden="true">
+              <p class="desk-side-head">Register</p>
+              <ul>
+                <li>Overview</li>
+                <li class="is-on">Applications <b>4</b></li>
+                <li>Members</li>
+                <li>Subscriptions</li>
+              </ul>
+              <p class="desk-side-head">Money</p>
+              <ul>
+                <li>Invoices</li>
+                <li>Payment proofs <b>2</b></li>
+                <li>Ledger</li>
+              </ul>
+              <p class="desk-side-head">Publish</p>
+              <ul>
+                <li>Directory</li>
+                <li>Articles</li>
+                <li>Cards</li>
+              </ul>
+            </aside>
+
+            <div class="desk-main">
+              <p class="desk-eyebrow">Monday, 13 October</p>
+              <h2 class="desk-title">Work that needs a person</h2>
+
+              <div class="queue">
+                <div class="queue-row">
+                  <div>
+                    <p class="queue-head">4 membership applications</p>
+                    <p class="queue-sub">2 Professional · 1 Associate · 1 Fellow</p>
+                  </div>
+                  <span class="pill pill-wait">Waiting</span>
+                  <span class="queue-btn queue-btn-solid">Review</span>
+                </div>
+                <div class="queue-row">
+                  <div>
+                    <p class="queue-head">2 bank-transfer proofs</p>
+                    <p class="queue-sub">Confirm against INV-2026-000412 and 000415</p>
+                  </div>
+                  <span class="pill pill-proof">Proof in</span>
+                  <span class="queue-btn">Open proofs</span>
+                </div>
+                <div class="queue-row">
+                  <div>
+                    <p class="queue-head">3 memberships expire within 7 days</p>
+                    <p class="queue-sub">Reminders went out · 7-day stage</p>
+                  </div>
+                  <span class="pill pill-ok">Sent</span>
+                  <span class="queue-btn">View</span>
+                </div>
+              </div>
+
+              <div class="desk-split">
+                <div class="desk-card">
+                  <p class="desk-eyebrow">What changed</p>
+                  <ul class="desk-list">
+                    <li><strong>INV-2026-000409 marked paid</strong><span>Paystack verification · Ada Nwankwo</span></li>
+                    <li><strong>CSV import dry-run finished</strong><span>84 rows · 3 duplicates held</span></li>
+                    <li><strong>Article published to Fellows</strong><span>Annual standing review notes</span></li>
+                  </ul>
+                </div>
+                <div class="desk-card">
+                  <p class="desk-eyebrow">Register</p>
+                  <p class="desk-stat">1,284 <small>current</small></p>
+                  <p class="desk-stat-sub">37 due this month · 12 lapsed</p>
+                  <div class="desk-bar" aria-hidden="true"><span style="width:84%"></span><span style="width:9%"></span><span style="width:7%"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="phone" aria-label="Example of the member area on a phone">
+          <div class="phone-top"><span>9:41</span><span class="phone-pill">Member area</span></div>
+          <p class="phone-hi">Good morning, Ada.</p>
+          <div class="phone-status">
+            <div><small>Standing</small><strong class="is-ok">Active</strong></div>
+            <div><small>Renews</small><strong>30 Nov 2026</strong></div>
+            <div><small>Annual dues</small><strong>₦48,000</strong></div>
+          </div>
+          <ul class="phone-list">
+            <li><span>01</span>Add your professional headline <small>Directory profile · 2 min</small></li>
+            <li><span>02</span>Download your membership card <small>CRD-2026-000418 · PDF</small></li>
+            <li><span>03</span>File last year's receipt <small>RCP-2025-000441</small></li>
+          </ul>
+          <span class="phone-cta">Renew membership</span>
+        </figure>
+
+        <p class="stage-caption"><span>Shown</span> Staff desk · Member area <em>Same portal, two views</em></p>
       </div>
     </section>
 
-    <!-- ============ FEATURES ============ -->
-    <section class="section section-features" id="features">
+    <!-- ============================== BAND ============================== -->
+    <section class="band" aria-label="What you are buying">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">What Membersflow can do</p>
-          <h2 class="h2">Everything your register needs.<br>Nothing it doesn't.</h2>
-          <p class="lede">One portal covering the full membership lifecycle: apply, approve, pay, renew, and stay found.</p>
+        <h2 class="band-title">The portal already runs. <strong>What you get is the setup, the onboarding and the team that keeps it running.</strong></h2>
+        <ul class="band-stats">
+          <li><strong>Fully managed</strong><span>Deployment, hosting, updates and encrypted backups</span><small>You never install or host anything</small></li>
+          <li><strong class="is-accent">With a human</strong><span>Onboarding, configuration and register import</span><small>Your structure and your branding, set up with you</small></li>
+          <li><strong>Yours</strong><span>Your logo, your colours, your vocabulary</span><small>Classes, chapters and divisions named your way</small></li>
+          <li><strong>No auto-debits</strong><span>Members renew themselves after reminders</span><small>No surprise charges, ever</small></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== COVERAGE ============================== -->
+    <section class="section" id="coverage">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Already built</p>
+          <h2 class="h2">Everything your register needs. <strong>Nothing it doesn't.</strong></h2>
+          <p class="section-intro">One portal covering the full membership lifecycle: apply, approve, pay, renew, and stay found. Every item below is working software you can walk through on a demo.</p>
         </div>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 13h4l2 3h6l2-3h4M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+
+        <ol class="coverage-list">
+          <li>
             <h3>Applications and approvals</h3>
-            <p>Publish your membership tracks and receive applications online, complete with application fees. Review each one as a team, approve as requested, or move an applicant to a different track with a recorded reason. Every decision is written down and traceable.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 10h19" stroke="currentColor" stroke-width="1.7"/><path d="M6 15h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <p>Publish your membership tracks and receive applications online, with application fees if you charge them. Review each one as a team, approve as requested, or move an applicant to a different track with a recorded reason.</p>
+          </li>
+          <li>
             <h3>Dues and payments that reconcile</h3>
-            <p>Collect dues through Paystack or Flutterwave, or accept bank transfers with uploaded payment proof your finance officer verifies. Every payment produces an immutable invoice and receipt, so your records never drift from reality.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 11A8 8 0 0 0 6.3 6.3L4 8.5M4 5v3.5H7.5M4 13a8 8 0 0 0 13.7 4.7L20 15.5M20 19v-3.5h-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p>Collect through Paystack or Flutterwave, or accept bank transfers with uploaded proof that your finance officer verifies. Every payment produces an immutable invoice and receipt.</p>
+          </li>
+          <li>
             <h3>Renewals without the chase</h3>
-            <p>Membership terms and expiry dates are tracked for you. Members get reminders before they lapse, and your register always shows who is current, due, or expired — no spreadsheet archaeology required.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="5" width="19" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/><circle cx="8" cy="12" r="2.2" stroke="currentColor" stroke-width="1.5"/><path d="M13.5 10h5M13.5 14h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <p>Terms and expiry dates are tracked for you. Members get reminders before they lapse, and the register always shows who is current, due, or expired.</p>
+          </li>
+          <li>
             <h3>Membership IDs and cards</h3>
-            <p>Issue unique membership numbers using your own serial or randomized scheme, and give every member a printable and PDF membership card with QR validity they can present anywhere.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20c1.1-3.7 4-5.6 7.5-5.6s6.4 1.9 7.5 5.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <p>Issue membership numbers using your own serial or randomized scheme, and give every member a printable PDF card with a QR code that checks their standing live.</p>
+          </li>
+          <li>
             <h3>A member area people actually use</h3>
-            <p>Members manage their own profile and photo, track applications, view invoices and payment history, download their card and receipts, and finish unfinished applications — without calling your office.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="m20.5 20.5-4.6-4.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M8 11h6M11 8v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <p>Members manage their profile and photo, track applications, view invoices and payment history, download their card and receipts, and finish unfinished applications without calling your office.</p>
+          </li>
+          <li>
             <h3>A public directory you control</h3>
-            <p>Publish an opt-in, search-first directory of your members, organized around your own classes, chapters, divisions, and specialties. Members choose what appears; private details never enter search results.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10.5 20 4l-4 16-5.5-6L3 10.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m10.5 14 3-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <p>An opt-in, search-first directory organized around your own classes, chapters, divisions and specialties. Members choose what appears; private details never enter search results.</p>
+          </li>
+          <li>
             <h3>News that reaches the right audience</h3>
-            <p>Publish articles, notices, and announcements to the public, to members only, or to specific membership types and levels — so the right message lands with the right people.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <p>Publish articles and announcements to the public, to members only, or to specific membership types and levels.</p>
+          </li>
+          <li>
             <h3>Bring your existing register with you</h3>
-            <p>Import current members through a guided CSV upload with validation and a dry-run preview, so nothing lands in the register wrong. Historical records stay intact and attributable.</p>
-          </article>
-        </div>
+            <p>A guided CSV import validates every row, up to 5,000 at a time, and shows a dry-run preview before anything is applied. Historical records stay intact and attributable.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="section section-how" id="how">
-      <div class="container how-grid">
-        <div class="how-panel reveal">
-          <img src="assets/img/process-members-v2.png" alt="" aria-hidden="true">
-          <div class="how-panel-overlay"></div>
-          <div class="how-panel-content">
-            <p class="eyebrow eyebrow-inverse">How it works</p>
-            <h2 class="h2">From setup to renewals in four steps</h2>
-            <p class="how-panel-note">We set up everything with you — structure, branding, payments, and your existing register.</p>
+    <!-- ============================== SYSTEM ============================== -->
+    <section class="section section-tint" id="system">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it fits together</p>
+          <h2 class="h2">One register. <strong>Every side of the organization.</strong></h2>
+          <p class="section-intro">Members, staff and the public are three views of the same record. Nothing is re-keyed, emailed around or tracked on WhatsApp.</p>
+        </div>
+
+        <div class="sys">
+          <div class="sys-card">
+            <p class="sys-label">Member area</p>
+            <p class="sys-sub">Browser · any device</p>
+            <ul>
+              <li>Apply and track the application</li>
+              <li>Pay by card or bank transfer</li>
+              <li>Download card and receipts</li>
+              <li>Update profile and photo</li>
+              <li>Renew when reminded</li>
+            </ul>
+          </div>
+          <span class="sys-arrow" aria-hidden="true"></span>
+          <div class="sys-core">
+            <p class="sys-label">Membersflow core</p>
+            <p class="sys-sub">One source of truth</p>
+            <ul>
+              <li>Register</li><li>Applications</li>
+              <li>Invoices &amp; receipts</li><li>Renewals</li>
+              <li>Cards</li><li>Directory</li>
+              <li>Articles</li><li>Audit log</li>
+            </ul>
+          </div>
+          <span class="sys-arrow" aria-hidden="true"></span>
+          <div class="sys-card">
+            <p class="sys-label">Public</p>
+            <p class="sys-sub">Directory · verification</p>
+            <ul>
+              <li>Search the opt-in directory</li>
+              <li>Verify a card by QR</li>
+              <li>Read public notices</li>
+              <li>See membership tracks</li>
+              <li>Start an application</li>
+            </ul>
           </div>
         </div>
-        <div class="how-steps">
-          <article class="step-card reveal">
-            <div class="step-label"><span>Step 1</span></div>
-            <h3>We set up your portal</h3>
-            <p>Our team configures your membership types, levels, plans, dues, and renewal terms with you, and applies your logo and brand colors so the portal feels unmistakably yours.</p>
-          </article>
-          <article class="step-card reveal">
-            <div class="step-label"><span>Step 2</span></div>
-            <h3>Open your doors</h3>
-            <p>Publish application tracks and start receiving applications online — or import your existing members and continue where you left off.</p>
-          </article>
-          <article class="step-card reveal">
-            <div class="step-label"><span>Step 3</span></div>
-            <h3>Approve and collect</h3>
-            <p>Review applications with your team, approve with confidence, and collect application fees and dues online or by bank transfer, all reconciled against proper invoices and receipts.</p>
-          </article>
-          <article class="step-card reveal">
-            <div class="step-label"><span>Step 4</span></div>
-            <h3>Stay current, forever</h3>
-            <p>Members renew on time with automatic reminders. Cards stay valid, reports stay ready, and your register stays clean year after year.</p>
-          </article>
+
+        <div class="sys-admin">
+          <p class="sys-admin-head"><span class="dot" aria-hidden="true"></span>Staff desk <em>Your team, one browser tab</em></p>
+          <div class="sys-admin-grid">
+            <div><strong>Register</strong><span>Who is current, due or lapsed, right now</span></div>
+            <div><strong>Money</strong><span>Invoices, payment proofs, ledger, refunds</span></div>
+            <div><strong>Configuration</strong><span>Types, levels, plans, roles, branding</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ WHO IT'S FOR ============ -->
-    <section class="section section-who" id="who">
-      <div class="container section-grid">
-        <div class="section-rail reveal">
-          <p class="eyebrow">Who it's for</p>
+    <!-- ============================== VOCABULARY ============================== -->
+    <section class="section" id="structure">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Your structure, your words</p>
+          <h2 class="h2">The portal adopts your vocabulary, <strong>not the other way round.</strong></h2>
+          <p class="section-intro">Membership classes and grades, chapters and regions, divisions and specialties are configurable labels. Pick an organization type to see the same member record described the way that body would describe it.</p>
         </div>
-        <div class="section-body">
-          <h2 class="h2 reveal">Built for organizations and institutions that run on membership</h2>
-          <p class="lede reveal">If your body admits members, collects dues, and needs an accurate register it can defend, Membersflow fits. Your structure is configurable — membership classes and grades, chapters and branches, divisions and specialties adapt to how your organization already describes itself, not the other way around.</p>
-          <ul class="audience-chips">
-            <li class="reveal">Professional associations and institutes</li>
-            <li class="reveal">Regulatory and certification bodies</li>
-            <li class="reveal">Alumni associations</li>
-            <li class="reveal">Trade bodies and unions</li>
-            <li class="reveal">Clubs and societies</li>
-            <li class="reveal">Faith-based organizations</li>
-            <li class="reveal">Cooperatives and NGOs</li>
-            <li class="reveal">Training and academic institutions</li>
+
+        <div class="vocab" id="vocab">
+          <div class="seg" role="group" aria-label="Organization type">
+            <button class="seg-btn" type="button" data-vocab="institute" aria-pressed="true">Professional institute</button>
+            <button class="seg-btn" type="button" data-vocab="alumni" aria-pressed="false">Alumni association</button>
+            <button class="seg-btn" type="button" data-vocab="union" aria-pressed="false">Trade union</button>
+            <button class="seg-btn" type="button" data-vocab="faith" aria-pressed="false">Faith organization</button>
+          </div>
+
+          <div class="vocab-stage" aria-live="polite">
+            <div class="record">
+              <div class="record-top">
+                <span class="avatar" data-v="initials">AM</span>
+                <div>
+                  <p class="record-name" data-v="name">Engr. Amaka Mensah</p>
+                  <p class="record-id"><span data-v="idLabel">Membership ID</span> · <code data-v="id">MF-2026-000418</code></p>
+                </div>
+                <span class="pill pill-ok">Active</span>
+              </div>
+              <dl class="record-fields">
+                <div><dt data-v="classLabel">Membership grade</dt><dd data-v="classValue">Fellow</dd></div>
+                <div><dt data-v="chapterLabel">Chapter</dt><dd data-v="chapterValue">Lagos Chapter</dd></div>
+                <div><dt data-v="divisionLabel">Division</dt><dd data-v="divisionValue">Structural engineering</dd></div>
+                <div><dt data-v="specialtyLabel">Specialty</dt><dd data-v="specialtyValue">Bridges</dd></div>
+              </dl>
+              <div class="record-foot">
+                <span data-v="duesLabel">Annual subscription</span>
+                <strong data-v="duesValue">₦48,000</strong>
+                <span class="record-renew">Renews <span data-v="renews">30 Nov 2026</span></span>
+              </div>
+            </div>
+
+            <div class="dir">
+              <p class="dir-title">Public directory · filters</p>
+              <div class="dir-filter"><span data-v="classLabel">Membership grade</span><span class="dir-chip" data-v="classValue">Fellow</span></div>
+              <div class="dir-filter"><span data-v="chapterLabel">Chapter</span><span class="dir-chip" data-v="chapterValue">Lagos Chapter</span></div>
+              <div class="dir-filter"><span data-v="divisionLabel">Division</span><span class="dir-chip" data-v="divisionValue">Structural engineering</span></div>
+              <div class="dir-filter"><span data-v="specialtyLabel">Specialty</span><span class="dir-chip" data-v="specialtyValue">Bridges</span></div>
+              <p class="dir-note">Opt-in per <span data-v="memberWord">member</span>. Email and phone never enter search.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="audiences">
+          <p class="audiences-lead">If your body admits members, collects dues, and needs an accurate register it can defend, Membersflow fits.</p>
+          <ul class="chips">
+            <li>Professional associations and institutes</li>
+            <li>Regulatory and certification bodies</li>
+            <li>Alumni associations</li>
+            <li>Trade bodies and unions</li>
+            <li>Clubs and societies</li>
+            <li>Faith-based organizations</li>
+            <li>Cooperatives and NGOs</li>
+            <li>Training and academic institutions</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ============ PAYMENTS ============ -->
-    <section class="section section-payments" id="payments">
+    <!-- ============================== RENEWALS ============================== -->
+    <section class="section section-tint" id="renewals">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
+          <p class="eyebrow">Renewals</p>
+          <h2 class="h2">Renewals <strong>without the chase.</strong></h2>
+          <p class="section-intro">Six reminders go out by email and in-app at fixed points around each member's expiry date. Members renew themselves; Membersflow never debits a card automatically. Drag the slider to see what a member receives, and when.</p>
+        </div>
+
+        <div class="renew" id="renew">
+          <div class="renew-controls">
+            <label class="renew-label" for="renew-range">
+              <span>Days until expiry</span>
+              <output id="renew-out" for="renew-range">30 days before</output>
+            </label>
+            <div class="renew-track-wrap">
+              <input class="renew-range" id="renew-range" type="range" min="-45" max="14" step="1" value="-30" aria-describedby="renew-help">
+              <ol class="renew-marks" aria-hidden="true">
+                <li style="--pos: -30">−30</li>
+                <li style="--pos: -14">−14</li>
+                <li style="--pos: -7">−7</li>
+                <li style="--pos: -1" class="is-minus-one">−1</li>
+                <li style="--pos: 0" class="is-expiry">0</li>
+                <li style="--pos: 7">+7</li>
+              </ol>
+            </div>
+            <p class="renew-help" id="renew-help">Reminder stages: 30, 14, 7 and 1 day before expiry, on the day, and 7 days after.</p>
+          </div>
+
+          <div class="renew-stage">
+            <div class="mail" id="renew-mail">
+              <div class="mail-head">
+                <span class="mail-from">Nigeria Institute of Engineers</span>
+                <span class="mail-stage" id="renew-stagename">Stage 1 of 6</span>
+              </div>
+              <p class="mail-subject" id="renew-subject">Your membership expires in 30 days</p>
+              <p class="mail-body" id="renew-body">Your membership expires in 30 days. Renew from your member area to keep your standing and your card valid.</p>
+              <span class="mail-cta">Renew membership</span>
+            </div>
+            <div class="renew-status">
+              <p class="eyebrow-sm">Register shows</p>
+              <p class="status-line"><span class="pill" id="renew-pill">Active</span> <span id="renew-statustext">Current, renewal window open</span></p>
+              <p class="renew-fine">A stage missed by more than 3 days is superseded by the next one, so no member gets a stale "expires tomorrow" a week late.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PAYMENTS ============================== -->
+    <section class="section section-dark" id="payments">
+      <div class="container">
+        <div class="section-head">
           <p class="eyebrow">Payments</p>
-          <h2 class="h2">Payments the way your members actually pay</h2>
+          <h2 class="h2">Payments the way <strong>your members actually pay.</strong></h2>
+          <p class="section-intro">Card payments through Paystack or Flutterwave are confirmed automatically. Bank transfers are accepted with uploaded proof and settled by your finance officer against the right invoice. Either way, the record holds up.</p>
         </div>
-        <div class="payment-grid">
-          <article class="payment-card reveal">
-            <div class="step-label"><span>Cards &amp; online</span></div>
-            <h3>Card payments, confirmed automatically</h3>
-            <p>Members pay their application fees and dues by card through Paystack or Flutterwave. Payments are confirmed automatically, and every transaction produces its own invoice and receipt.</p>
-          </article>
-          <article class="payment-card reveal">
-            <div class="step-label"><span>Bank transfers</span></div>
-            <h3>Bank transfers, verified properly</h3>
-            <p>Some members will always prefer the bank. Membersflow publishes your current account instructions, accepts uploaded payment proof, and routes it to your finance officer for review and settlement against the right invoice. Stale account details become a thing of the past.</p>
-          </article>
-          <article class="payment-card reveal">
-            <div class="step-label"><span>Records</span></div>
-            <h3>Records that hold up</h3>
-            <p>Invoices, receipts, and payment records are immutable once issued. When a member asks "didn't I pay last year?", the answer is one lookup away — with the amount, the date, and who verified it.</p>
-          </article>
+
+        <div class="pay" id="pay">
+          <div class="tabs" role="tablist" aria-label="Payment method">
+            <button class="tab" role="tab" id="tab-paystack" aria-selected="true" aria-controls="panel-paystack" type="button">Paystack</button>
+            <button class="tab" role="tab" id="tab-flutterwave" aria-selected="false" aria-controls="panel-flutterwave" type="button" tabindex="-1">Flutterwave</button>
+            <button class="tab" role="tab" id="tab-bank" aria-selected="false" aria-controls="panel-bank" type="button" tabindex="-1">Bank transfer</button>
+          </div>
+
+          <div class="pay-panel" role="tabpanel" id="panel-paystack" aria-labelledby="tab-paystack">
+            <div class="pay-copy">
+              <h3>Card payment, confirmed by webhook.</h3>
+              <p>The member pays from their invoice. Paystack confirms the transaction to the portal directly, the invoice flips to paid, and a receipt is issued. Nobody re-keys anything.</p>
+              <ul class="ticks">
+                <li>Verified end to end in sandbox, with webhooks</li>
+                <li>Amount checked against the invoice before it is marked paid</li>
+                <li>Receipt available in the member area immediately</li>
+              </ul>
+            </div>
+            <div class="invoice-ui">
+              <div class="invoice-row">
+                <div><code>INV-2026-000412</code><span>Annual subscription · Professional</span></div>
+                <strong>₦48,000.00</strong>
+                <span class="pill pill-wait">Unpaid</span>
+              </div>
+              <div class="invoice-flow">
+                <span class="flow-step is-done">Pay with Paystack</span>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <span class="flow-step is-done">Webhook confirmed</span>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <span class="flow-step is-now">Paid · receipt RCP-2026-000388</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-panel" role="tabpanel" id="panel-flutterwave" aria-labelledby="tab-flutterwave" hidden>
+            <div class="pay-copy">
+              <h3>Same flow, second provider.</h3>
+              <p>Organizations that already bank with a Flutterwave-connected account keep it. Flutterwave v3 is wired exactly like Paystack: the member pays, the gateway confirms, the invoice closes.</p>
+              <ul class="ticks">
+                <li>Run one provider or both; members see whichever you enable</li>
+                <li>Gateway settings live behind the <code>payments.settings.manage</code> permission</li>
+                <li>Refunds and credit notes are recorded against the original invoice</li>
+              </ul>
+            </div>
+            <div class="invoice-ui">
+              <div class="invoice-row">
+                <div><code>INV-2026-000415</code><span>Application fee · Associate</span></div>
+                <strong>₦5,000.00</strong>
+                <span class="pill pill-wait">Unpaid</span>
+              </div>
+              <div class="invoice-flow">
+                <span class="flow-step is-done">Pay with Flutterwave</span>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <span class="flow-step is-done">Webhook confirmed</span>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+                <span class="flow-step is-now">Paid · receipt issued</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-panel" role="tabpanel" id="panel-bank" aria-labelledby="tab-bank" hidden>
+            <div class="pay-copy">
+              <h3>Some members will always prefer the bank.</h3>
+              <p>The portal shows your current account details, so stale instructions on an old PDF stop circulating. The member uploads proof; your finance officer confirms it against the bank statement before anything is marked paid.</p>
+              <ul class="ticks">
+                <li>Proof as JPEG, PNG or PDF, stored privately, never public</li>
+                <li>"Confirm, do not mark paid from the upload alone" is the rule in the UI</li>
+                <li>Who verified it, and when, stays on the record</li>
+              </ul>
+            </div>
+            <div class="invoice-ui">
+              <div class="invoice-row">
+                <div><code>INV-2026-000402</code><span>Annual subscription · Fellow</span></div>
+                <strong>₦96,000.00</strong>
+                <span class="pill pill-proof">Proof in</span>
+              </div>
+              <ol class="bank-steps">
+                <li><span>1</span>Member transfers to the account shown on the invoice</li>
+                <li><span>2</span>Member uploads the transfer slip from their member area</li>
+                <li><span>3</span>Finance officer compares it with the bank statement</li>
+                <li class="is-now"><span>4</span>Invoice marked paid · receipt issued · verifier recorded</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <ul class="pay-facts">
+          <li><strong>Immutable once issued.</strong> Invoices and receipts cannot be edited after the fact. Corrections are credit notes.</li>
+          <li><strong>A ledger finance can filter.</strong> Paid, outstanding, overdue or refunded, by date range and by method.</li>
+          <li><strong>Naira first.</strong> ₦ is the default, with $, £ and € available for bodies that need them.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================== CARD ============================== -->
+    <section class="section" id="cards">
+      <div class="container card-grid">
+        <div class="card-copy">
+          <p class="eyebrow">Membership cards</p>
+          <h2 class="h2">A card that proves <strong>standing, not just membership.</strong></h2>
+          <p class="section-intro">Every member can download a PDF card or print it at CR80 size. The QR on the back opens a live verification page on your portal, so a lapsed membership reads as lapsed even on a card printed last year.</p>
+          <ul class="ticks ticks-ink">
+            <li>Your name, logo and colours on the front</li>
+            <li>Serial per card, so a reissued card retires the old one</li>
+            <li>Standing is checked live, never trusted from the print</li>
+          </ul>
+          <button class="btn btn-secondary" type="button" id="card-flip-btn" aria-pressed="false">Flip the card</button>
+        </div>
+
+        <div class="card-stage">
+          <div class="mcard" id="mcard" tabindex="0" role="img" aria-label="Example membership card. Front shows the organization, member name and validity. Back shows a QR code for live verification.">
+            <div class="mcard-inner">
+              <div class="mcard-face mcard-front">
+                <div class="mcard-row">
+                  <span class="mcard-org">Nigeria Institute of Engineers</span>
+                  <span class="mcard-grade">Fellow</span>
+                </div>
+                <div class="mcard-mid">
+                  <span class="mcard-photo" aria-hidden="true">AM</span>
+                  <div>
+                    <p class="mcard-name">Engr. Amaka Mensah</p>
+                    <p class="mcard-id">MF-2026-000418</p>
+                    <p class="mcard-sub">Fellow · Lagos Chapter</p>
+                  </div>
+                </div>
+                <div class="mcard-foot">
+                  <span>Issued 24 Sep 2026</span>
+                  <span>Valid until 24 Sep 2027</span>
+                  <span class="mcard-serial">CRD-2026-000418</span>
+                </div>
+              </div>
+              <div class="mcard-face mcard-back">
+                <div class="mcard-row">
+                  <span class="mcard-org">Official verification</span>
+                  <span class="mcard-grade mcard-grade-soft">Authoritative</span>
+                </div>
+                <div class="mcard-mid">
+                  <svg class="mcard-qr" id="mcard-qr" viewBox="0 0 25 25" aria-hidden="true"></svg>
+                  <div>
+                    <p class="mcard-name mcard-name-sm">Scan to verify validity online.</p>
+                    <p class="mcard-sub">Property of Nigeria Institute of Engineers. Non-transferable. Online status is authoritative.</p>
+                  </div>
+                </div>
+                <div class="mcard-foot">
+                  <span class="mcard-serial">CRD-2026-000418</span>
+                  <span>Issue #1 · v2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="verify">
+            <span class="verify-check" aria-hidden="true">✓</span>
+            <div>
+              <p class="verify-title">Valid membership</p>
+              <p class="verify-sub">Authentic and in good standing · checked just now</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ TRUST & SECURITY ============ -->
-    <section class="section section-security" id="security">
+    <!-- ============================== ACCESS ============================== -->
+    <section class="section section-tint" id="access">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow eyebrow-inverse">Trust, security &amp; ownership</p>
-          <h2 class="h2">Run by your team. Deployed and cared for by ours.</h2>
-          <p class="lede lede-inverse">Membersflow is a managed service: we deploy, host, and maintain each portal, so your organization gets a serious system without an IT department.</p>
+        <div class="section-head">
+          <p class="eyebrow">Access with boundaries</p>
+          <h2 class="h2">Who can do what is <strong>decided by you, and recorded.</strong></h2>
+          <p class="section-intro">Roles are built from about 55 granular permissions. A finance officer sees payment proofs but not membership approvals; a registrar reviews applications but cannot void an invoice. Pick a role to see what it can touch.</p>
         </div>
-        <div class="trust-grid">
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3 4.5 6v5c0 4.6 3.2 8.2 7.5 10 4.3-1.8 7.5-5.4 7.5-10V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 11.5 2.2 2.2L15.5 9.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Fully managed deployment</h3>
-            <p>We install, host, update, back up, and secure your Membersflow portal. Your staff and members only ever log in.</p>
+
+        <div class="roles" id="roles">
+          <div class="seg" role="group" aria-label="Role">
+            <button class="seg-btn" type="button" data-role="registrar" aria-pressed="true">Registrar</button>
+            <button class="seg-btn" type="button" data-role="finance" aria-pressed="false">Finance officer</button>
+            <button class="seg-btn" type="button" data-role="editor" aria-pressed="false">Content editor</button>
+            <button class="seg-btn" type="button" data-role="admin" aria-pressed="false">Administrator</button>
           </div>
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
-            <h3>Onboarding with a human</h3>
-            <p>We configure your structure and branding with you and import your existing register as part of setup.</p>
+
+          <ul class="perm-list" id="perm-list" aria-live="polite">
+            <li data-roles="registrar admin"><span class="perm-name">Review membership applications</span><code>members.review</code></li>
+            <li data-roles="registrar admin"><span class="perm-name">Import members, dry run first</span><code>members.import</code></li>
+            <li data-roles="registrar admin"><span class="perm-name">Issue membership cards</span><code>cards.issue</code></li>
+            <li data-roles="admin"><span class="perm-name">Suspend a member</span><code>members.suspend</code></li>
+            <li data-roles="finance admin"><span class="perm-name">Review bank-transfer proofs</span><code>payments.offline.review</code></li>
+            <li data-roles="finance admin"><span class="perm-name">Record refunds</span><code>payments.refunds.record</code></li>
+            <li data-roles="finance admin"><span class="perm-name">Void an invoice</span><code>invoices.void</code></li>
+            <li data-roles="finance admin"><span class="perm-name">View finance reports</span><code>reports.finance.view</code></li>
+            <li data-roles="editor admin"><span class="perm-name">Publish articles and notices</span><code>content.publish</code></li>
+            <li data-roles="editor admin"><span class="perm-name">Moderate directory profiles</span><code>directory.profiles.moderate</code></li>
+            <li data-roles="admin"><span class="perm-name">Create and assign roles</span><code>roles.manage.custom</code></li>
+            <li data-roles="admin"><span class="perm-name">Read the audit log</span><code>audit.view</code></li>
+          </ul>
+          <p class="roles-count" id="roles-count"></p>
+        </div>
+
+        <div class="access-notes">
+          <div>
+            <span class="num">01</span>
+            <h3>Sign-in that holds</h3>
+            <p>Multi-factor authentication, passkeys, SMS sign-in codes and Google sign-in. A protected owner account sits above every custom role and never appears in the staff list.</p>
           </div>
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4.5" y="10.5" width="15" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="15.5" r="1.4" fill="currentColor"/></svg></span>
-            <h3>Access with boundaries</h3>
-            <p>Role-based permissions separate what staff, finance officers, and administrators can do, protected by multi-factor authentication.</p>
-          </div>
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3.5 12h4l2-5 4 10 2-5h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <span class="num">02</span>
             <h3>Decisions on the record</h3>
-            <p>Administrative actions are captured in activity logs, so approvals, grants, and changes are always attributable.</p>
+            <p>Approvals, grants, voids and settings changes are captured in the audit log with the actor and the time. When a question comes up a year later, the answer is a lookup.</p>
           </div>
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 3l18 18M10.6 10.7a2.5 2.5 0 0 0 3.4 3.4M9.9 5.2A9.8 9.8 0 0 1 12 5c5 0 8.6 3.5 10 7-.5 1.2-1.3 2.5-2.4 3.6M6.1 6.6C4.1 8 2.7 9.9 2 12c1.4 3.5 5 7 10 7 1.5 0 2.9-.3 4.1-.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div>
+            <span class="num">03</span>
             <h3>Privacy-first directory</h3>
-            <p>Public profiles are strictly opt-in, with field-level privacy that keeps emails, phone numbers, and hidden details out of search entirely.</p>
-          </div>
-          <div class="trust-item reveal">
-            <span class="trust-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3.5 14.6 9l6 .9-4.3 4.2 1 5.9-5.3-2.8-5.3 2.8 1-5.9L3.4 9.9l6-.9L12 3.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
-            <h3>Your brand, front and center</h3>
-            <p>Your logo, your primary color, your accent. The portal wears your identity from day one.</p>
+            <p>Public profiles are opt-in per member, with field-level privacy. Emails and phone numbers never enter search, and the directory is protected against scraping bots.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Placeholder testimonials — replace quotes and attributions with real ones when available -->
-    <section class="section section-testimonials" id="testimonials">
-      <div class="testimonials-bg" aria-hidden="true"></div>
-      <div class="container testimonials-inner">
-        <div class="quote-mark reveal" aria-hidden="true">
-          <svg width="44" height="34" viewBox="0 0 44 34" fill="currentColor"><path d="M0 34V20.4C0 8.9 6.8 1.7 17.6 0l2.1 4.9c-6 1.9-9.3 5.7-9.7 11h9.2V34H0Zm24.8 0V20.4C24.8 8.9 31.6 1.7 42.4 0l1.6 4.9c-6 1.9-9.2 5.7-9.6 11h9.2V34H24.8Z"/></svg>
+    <!-- ============================== HOW IT WORKS ============================== -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">From demo to live</p>
+          <h2 class="h2">From setup to renewals <strong>in four steps.</strong></h2>
+          <p class="section-intro">Membersflow is a managed service. We deploy, host, update, back up and secure each portal, so your organization gets a serious system without an IT department.</p>
         </div>
-        <blockquote class="quote-featured reveal">
-          <p>"We replaced eleven spreadsheets and a shared inbox with one register. Every application, every payment, every renewal — finally in the same place."</p>
-          <footer class="quote-attrib">
-            <span class="avatar" aria-hidden="true">AO</span>
-            <span class="stars" aria-label="Rated 5 out of 5">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9 2.9-6Z"/></svg>
-            </span>
-            <span class="quote-name">Registrar, professional institute</span>
-          </footer>
-        </blockquote>
-        <div class="quote-grid">
-          <blockquote class="quote-card reveal">
-            <p>"Every bank-transfer proof now lands against the right invoice. Month-end reconciliation went from days to an afternoon."</p>
-            <footer class="quote-attrib">
-              <span class="avatar" aria-hidden="true">FO</span>
-              <span class="quote-name">Finance officer, trade body</span>
-            </footer>
-          </blockquote>
-          <blockquote class="quote-card reveal">
-            <p>"I renewed, downloaded my card, and never made a single phone call. That's a first in my twenty years of membership."</p>
-            <footer class="quote-attrib">
-              <span class="avatar" aria-hidden="true">MB</span>
-              <span class="quote-name">Member, alumni association</span>
-            </footer>
-          </blockquote>
-        </div>
+        <ol class="steps">
+          <li>
+            <p class="step-when">Step 1</p>
+            <span class="num">01</span>
+            <div>
+              <h3>We set up your portal</h3>
+              <p>Our team configures your membership types, levels, plans, dues and renewal terms with you, and applies your logo and colours so the portal is unmistakably yours.</p>
+            </div>
+          </li>
+          <li>
+            <p class="step-when">Step 2</p>
+            <span class="num">02</span>
+            <div>
+              <h3>Open your doors</h3>
+              <p>Publish application tracks and start receiving applications online, or import your existing members and continue where you left off.</p>
+            </div>
+          </li>
+          <li>
+            <p class="step-when">Step 3</p>
+            <span class="num">03</span>
+            <div>
+              <h3>Approve and collect</h3>
+              <p>Review applications with your team, approve with confidence, and collect fees and dues online or by bank transfer, all reconciled against proper invoices.</p>
+            </div>
+          </li>
+          <li>
+            <p class="step-when">Every year after</p>
+            <span class="num">04</span>
+            <div>
+              <h3>Stay current</h3>
+              <p>Members renew on time with reminders. Cards stay valid, reports stay ready, and your register stays clean.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
-    <section class="section section-faq" id="faq">
-      <div class="container section-grid">
-        <div class="section-rail reveal">
+    <!-- ============================== FAQ ============================== -->
+    <section class="section section-tint" id="faq">
+      <div class="container faq-grid">
+        <div class="section-head section-head-left">
           <p class="eyebrow">FAQ</p>
+          <h2 class="h2">Questions, <strong>answered.</strong></h2>
+          <p class="section-intro">Anything else, write to <a class="link" href="mailto:hello@membersflow.com">hello@membersflow.com</a>.</p>
         </div>
-        <div class="section-body">
-          <h2 class="h2 reveal">Questions, answered</h2>
-          <div class="faq-list">
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Do we need our own servers or an IT team?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>No. Membersflow is fully managed — we deploy, host, and maintain the portal for you. Your staff and members only need a browser.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>How do we get started?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>Request a demo. We walk you through the portal, then configure your membership structure, branding, and payment setup, and import your existing register as part of onboarding.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Which payment methods are supported?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>Paystack and Flutterwave for online card payments, plus manual bank transfer with uploaded proof that your finance team verifies and settles.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Can we import our existing members?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. A guided CSV import validates every row and shows a dry-run preview before anything is applied to your register.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Can members manage their own records?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Each member gets a self-service area for their profile, photo, applications, invoices, payment history, and membership card.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Is the public directory compulsory?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>No. Publication is opt-in per member and configurable by the organization. Many bodies run entirely without a public directory.</p></div></div>
-            </div>
-            <div class="faq-item reveal">
-              <button class="faq-question" aria-expanded="false">
-                <span>Will it match how our organization is structured?</span>
-                <span class="faq-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
-              </button>
-              <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. Membership classes and grades, chapters and regions, divisions and specialties are all configurable — the system adopts your vocabulary, not the reverse.</p></div></div>
-            </div>
-          </div>
+        <div class="faq">
+          <details name="faq" open>
+            <summary>Do we need our own servers or an IT team?</summary>
+            <p>No. Membersflow is fully managed. We deploy, host and maintain the portal for you. Your staff and members only need a browser.</p>
+          </details>
+          <details name="faq">
+            <summary>How do we get started?</summary>
+            <p>Book a demo. We walk you through the portal, then configure your membership structure, branding and payment setup, and import your existing register as part of onboarding.</p>
+          </details>
+          <details name="faq">
+            <summary>Which payment methods are supported?</summary>
+            <p>Paystack and Flutterwave for online card payments, plus bank transfer with uploaded proof that your finance team verifies and settles. Manual payments can also be recorded.</p>
+          </details>
+          <details name="faq">
+            <summary>Does it charge members' cards automatically?</summary>
+            <p>No. Renewal is manual by design: members receive reminders and renew themselves. There are no surprise debits.</p>
+          </details>
+          <details name="faq">
+            <summary>Can we import our existing members?</summary>
+            <p>Yes. A guided CSV import validates every row and shows a dry-run preview before anything is applied to your register.</p>
+          </details>
+          <details name="faq">
+            <summary>Is the public directory compulsory?</summary>
+            <p>No. Publication is opt-in per member and configurable by the organization. Many bodies run entirely without a public directory.</p>
+          </details>
+          <details name="faq">
+            <summary>Will it match how our organization is structured?</summary>
+            <p>Yes. Membership classes and grades, chapters and regions, divisions and specialties are all configurable. The system adopts your vocabulary.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- ============ FINAL CTA ============ -->
-    <section class="section section-cta" id="cta">
-      <div class="cta-bg" aria-hidden="true"></div>
+    <!-- ============================== CTA ============================== -->
+    <section class="cta" id="cta">
       <div class="container cta-inner">
-        <p class="cta-badge reveal">Ready when you are</p>
-        <h2 class="cta-title reveal"><span class="dim">Bring your membership</span> into one flow.</h2>
-        <p class="cta-sub reveal">We deploy and configure Membersflow for your organization and give your team and members a portal worth logging into. You bring the members; we run the software.</p>
-        <div class="cta-actions reveal">
-          <a href="mailto:hello@membersflow.com?subject=Demo%20request" class="btn btn-light btn-lg">
-            <span class="btn-label"><span>Book a demo</span><span aria-hidden="true">Book a demo</span></span>
-            <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="mailto:hello@membersflow.com" class="btn btn-ghost btn-lg">
-            <span class="btn-label"><span>Talk to us</span><span aria-hidden="true">Talk to us</span></span>
-          </a>
+        <p class="eyebrow">Ready when you are</p>
+        <h2 class="display display-sm">Bring your membership <strong>into one flow.</strong></h2>
+        <p class="cta-body">We deploy and configure Membersflow for your organization and give your team and members a portal worth logging into. You bring the members; we run the software.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="mailto:hello@membersflow.com?subject=Membersflow%20demo%20request">Book a live demo</a>
+          <a class="link-arrow link-arrow-light" href="mailto:hello@membersflow.com">Talk to us <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#top" class="brand" aria-label="Membersflow home">
-            <img class="brand-logo" src="assets/img/logo.png" alt="">
-          </a>
-          <p class="footer-strapline">Membership management for organizations and institutions.</p>
-          <a class="footer-contact" href="mailto:hello@membersflow.com">
-            <span class="footer-contact-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5.5" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m3.5 7 8.5 6 8.5-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            hello@membersflow.com
-          </a>
-        </div>
-        <nav class="footer-cols" aria-label="Footer">
-          <div class="footer-col">
-            <h4>Product</h4>
-            <a href="#features">Features</a>
-            <a href="#how">How it works</a>
-            <a href="#features">Public directory</a>
-            <a href="#features">Membership cards</a>
-            <a href="#faq">FAQ</a>
-          </div>
-          <div class="footer-col">
-            <h4>Get started</h4>
-            <a href="#cta">Request a demo</a>
-            <a href="#how">Onboarding</a>
-            <a href="#faq">Help centre</a>
-          </div>
-          <div class="footer-col">
-            <h4>Organization</h4>
-            <a href="#who">About</a>
-            <a href="#cta">Contact</a>
-            <a href="#testimonials">Announcements</a>
-          </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-          </div>
-        </nav>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/logo-dark.png" width="120" height="36" alt="Membersflow">
+        <span>Membership management for organizations and institutions.</span>
       </div>
-      <div class="footer-bottom">
-        <p>© <span id="year">2026</span> Membersflow. All rights reserved.</p>
-        <p class="footer-managed">Deployed and maintained for you.</p>
-      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#coverage">What it covers</a>
+        <a href="#payments">Payments</a>
+        <a href="#access">Security</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:hello@membersflow.com">hello@membersflow.com</a>
+      </nav>
+      <p class="footer-legal">© 2026 Membersflow</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2" defer></script>
 </body>
 </html>
