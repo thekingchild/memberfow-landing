@@ -283,6 +283,12 @@
     applyRole('registrar');
   }
 
+  /* ---------- Analytics ---------- */
+
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+
   /* ---------- Demo request modal (StaticForms) ---------- */
   /* Trigger buttons keep a mailto: href as the no-JS fallback. */
 
@@ -354,7 +360,11 @@
 
   if (demoOverlay && demoForm) {
     $$('[data-demo-trigger]').forEach(function (trigger) {
-      trigger.addEventListener('click', function (e) { e.preventDefault(); openDemo(); });
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openDemo();
+        track('demo_form_open', { location: trigger.closest('section, header, footer') ? (trigger.closest('section, header, footer').id || trigger.closest('section, header, footer').tagName.toLowerCase()) : 'page' });
+      });
     });
     $$('[data-demo-close]').forEach(function (btn) { btn.addEventListener('click', closeDemo); });
     demoOverlay.addEventListener('click', function (e) { if (e.target === demoOverlay) closeDemo(); });
@@ -436,7 +446,10 @@
         })
         .then(function (result) {
           clearTimeout(timeout);
-          if (result.ok && result.data && result.data.success) showDemoSuccess(name, email);
+          if (result.ok && result.data && result.data.success) {
+            showDemoSuccess(name, email);
+            track('generate_lead', { form: 'demo_request', organization_type: orgType || 'unspecified', members_range: members || 'unspecified' });
+          }
           else failDemo();
         })
         .catch(function () { clearTimeout(timeout); failDemo(); });
