@@ -1,0 +1,40 @@
+# Membersflow
+
+> Membersflow is membership management software for professional associations, institutions and membership bodies in Nigeria. It is a fully managed web portal covering applications, dues and payments, renewals, membership cards and a public member directory. Membersflow deploys, hosts, updates, backs up and secures each portal; the organization's staff and members only need a browser.
+
+## What it does
+
+- Online membership applications and approvals, with optional application fees and team review
+- Dues and payments through Paystack or Flutterwave, or bank transfer with uploaded proof verified by the finance team; every payment produces an immutable invoice and receipt
+- Renewal tracking with reminders at six stages; renewal is manual by design, so members' cards are never charged automatically
+- Membership numbers and printable PDF membership cards with a QR code that checks a member's standing live
+- A member area where members manage their profile, track applications, view invoices and payment history, and download cards and receipts
+- An opt-in public member directory organized by the organization's own classes, chapters, divisions and specialties
+- News and announcements for the public, members only, or specific membership types and levels
+- Role-based staff access with an audit log
+- Guided CSV import of an existing member register (up to 5,000 rows at a time) with a dry-run preview
+
+## Who it is for
+
+Professional associations, institutions and other membership organizations that currently run their register on spreadsheets, paper or WhatsApp. Membership classes, grades, chapters, regions, divisions and specialties are configurable, so the portal uses each organization's own vocabulary.
+
+## How it works
+
+1. Membersflow configures the portal: membership types, levels, plans, dues, renewal terms, logo and colours.
+2. The organization publishes application tracks or imports its existing members.
+3. Staff review applications and collect fees and dues online or by bank transfer.
+4. Members renew each year after reminders; cards stay valid and reports stay ready.
+
+No servers, IT team or installation are needed. Getting started begins with a live demo.
+
+## Links
+
+- [Home page](https://www.membersflow.ng/): product overview, features, payments, security and FAQ
+- [FAQ](https://www.membersflow.ng/#faq): common questions about setup, payments, renewals and the directory
+- [Privacy Policy](https://www.membersflow.ng/privacy.html)
+- [Terms of Service](https://www.membersflow.ng/terms.html)
+
+## Contact
+
+- Email: hello@membersflow.ng
+- Book a demo: https://www.membersflow.ng/
